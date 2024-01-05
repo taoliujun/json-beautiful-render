@@ -1,3 +1,4 @@
+import { addTestid } from '../utils/dom';
 import { ClassNameEnum, generateClassName } from './style';
 import { getValueType, isBoolean, isNull, isNumber, isString } from '../utils/valueType';
 import type { Options } from './types';
@@ -7,11 +8,11 @@ import { ROOT_KEY } from './constant';
 export const generateSingleItem = (
     label: string,
     value: unknown,
-    opt?: Partial<{
+    opt: Partial<{
         isLast: boolean;
     }>,
 ) => {
-    const { isLast } = opt || {};
+    const { isLast } = opt;
     const comma = isLast ? '' : ',';
 
     const wrapperDom = document.createElement('div');
@@ -22,25 +23,27 @@ export const generateSingleItem = (
 
     if (label) {
         const labelDom = document.createElement('span');
+        addTestid(labelDom, 'label');
         labelDom.classList.add(generateClassName(ClassNameEnum.SINGLE_LABEL));
         labelDom.innerHTML = `"${label}":&nbsp;`;
         contentWrapperDom.append(labelDom);
     }
 
     const valueDom = document.createElement('span');
+    addTestid(valueDom, 'value');
     valueDom.classList.add(generateClassName(ClassNameEnum.SINGLE_VALUE));
 
     if (isString(value)) {
-        valueDom.innerText = `"${value}"${comma}`;
+        valueDom.textContent = `"${value}"${comma}`;
         valueDom.classList.add(generateClassName(ClassNameEnum.SINGLE_STRING));
     } else if (isNumber(value)) {
-        valueDom.innerText = `${value}${comma}`;
+        valueDom.textContent = `${value}${comma}`;
         valueDom.classList.add(generateClassName(ClassNameEnum.SINGLE_NUMBER));
     } else if (isNull(value) || isBoolean(value)) {
-        valueDom.innerText = `${value}${comma}`;
+        valueDom.textContent = `${value}${comma}`;
         valueDom.classList.add(generateClassName(ClassNameEnum.SINGLE_SPECIALNESS));
     } else {
-        valueDom.innerText = `${getValueType(value)}${comma}`;
+        valueDom.textContent = `${getValueType(value)}${comma}`;
     }
     contentWrapperDom.append(valueDom);
 
@@ -53,15 +56,16 @@ export const generateSingleItem = (
 export const generateWrapperItem = (
     label: string,
     values: HTMLElement[],
-    opt?: Partial<{
+    opt: Partial<{
         isArrayType: boolean;
         isLast: boolean;
     }> &
         Partial<Pick<Options, 'expand' | 'showItemsLength'>>,
 ) => {
-    const { isArrayType, isLast, expand, showItemsLength } = opt || {};
+    const { isArrayType, isLast, expand, showItemsLength } = opt;
 
     const wrapperDom = document.createElement('div');
+    addTestid(wrapperDom, 'wrapper');
     wrapperDom.classList.add(generateClassName(ClassNameEnum.ITEMS_WRAPPER));
     if (!label || label === ROOT_KEY) {
         wrapperDom.classList.add(generateClassName(ClassNameEnum.ROOT_WRAPPER));
@@ -71,16 +75,19 @@ export const generateWrapperItem = (
     }
 
     const expandDom = document.createElement('button');
+    addTestid(expandDom, 'expand');
     expandDom.classList.add(generateClassName(ClassNameEnum.ITEMS_EXPAND));
 
     const lengthDom = document.createElement('span');
+    addTestid(lengthDom, 'length');
     lengthDom.classList.add(generateClassName(ClassNameEnum.ITEMS_LENGTH));
-    lengthDom.innerText = `${values.length} ${values.length > 1 ? 'items' : 'item'}`;
+    lengthDom.textContent = `${values.length} ${values.length > 1 ? 'items' : 'item'}`;
 
     const typeSperatorBegin = isArrayType ? '[' : '{';
     const typeSperatorEnd = isArrayType ? ']' : '}';
 
     const beginWrapper = document.createElement('div');
+    addTestid(beginWrapper, 'begin');
     beginWrapper.classList.add(generateClassName(ClassNameEnum.ITEMS_BEGIN));
     beginWrapper.innerHTML =
         label && label !== ROOT_KEY ? `"${label.toString()}":&nbsp;${typeSperatorBegin}` : `${typeSperatorBegin}`;
@@ -98,15 +105,16 @@ export const generateWrapperItem = (
     });
 
     const endWrapper = document.createElement('div');
+    addTestid(endWrapper, 'end');
     endWrapper.classList.add(generateClassName(ClassNameEnum.ITEMS_END));
-    endWrapper.innerText = `${typeSperatorEnd}${isLast ? '' : ','}`;
+    endWrapper.textContent = `${typeSperatorEnd}${isLast ? '' : ','}`;
 
     wrapperDom.append(beginWrapper, contentWrapper, endWrapper);
 
     let hasExpand = false;
     const toggleExpand = () => {
         hasExpand = !hasExpand;
-        expandDom.innerText = hasExpand ? '-' : '+';
+        expandDom.textContent = hasExpand ? '-' : '+';
         contentWrapper.classList.toggle(generateClassName(ClassNameEnum.ITEMS_CONTENT_EXPAND), hasExpand);
         if (showItemsLength === 'collapse') {
             if (hasExpand) {

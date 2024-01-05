@@ -1,5 +1,6 @@
 module.exports = {
     extends: ['@taoliujun/eslint-config'],
+    parserOptions: { project: './tsconfig.lint.json' },
     overrides: [
         {
             // page store components are temporarily unused

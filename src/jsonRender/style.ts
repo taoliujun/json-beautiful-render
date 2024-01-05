@@ -1,3 +1,4 @@
+import { IS_JEST } from '../utils/env';
 import type { Options } from './types';
 
 export enum ClassNameEnum {
@@ -21,7 +22,7 @@ export enum ClassNameEnum {
     SINGLE_SPECIALNESS = 'single_specialness',
 }
 
-const classNamePrefix = Math.random().toString(36).slice(2);
+const classNamePrefix = IS_JEST ? '' : Math.random().toString(36).slice(2);
 
 const BASE_STYLES = {
     lineHeight: 20,
@@ -53,8 +54,8 @@ const renderRootStyle = () => {
 };
 
 // items style
-const renderItemsStyle = (options?: Partial<Options>) => {
-    const { labelColor, levelHighLightColor } = options || {};
+const renderItemsStyle = (options: Partial<Options>) => {
+    const { labelColor, levelHighLightColor } = options;
     const styles = `
       .${generateClassName(ClassNameEnum.ITEMS_WRAPPER)} {
         position: relative;
@@ -114,8 +115,8 @@ const renderItemsStyle = (options?: Partial<Options>) => {
 };
 
 // item style
-const renderItemStyle = (options?: Partial<Options>) => {
-    const { labelColor, valueColor, activeBgColor, activeHighLightColor, valueColors } = options || {};
+const renderItemStyle = (options: Partial<Options>) => {
+    const { labelColor, valueColor, activeBgColor, activeHighLightColor, valueColors = {} } = options;
     const styles = `
       .${generateClassName(ClassNameEnum.SINGLE_WRAPPER)} {
         display: flex;
@@ -143,20 +144,20 @@ const renderItemStyle = (options?: Partial<Options>) => {
         color: ${valueColor};
       }
       .${generateClassName(ClassNameEnum.SINGLE_STRING)} {
-        color: ${valueColors?.string};
+        color: ${valueColors.string};
       }
       .${generateClassName(ClassNameEnum.SINGLE_NUMBER)} {
-        color: ${valueColors?.number};
+        color: ${valueColors.number};
       }
       .${generateClassName(ClassNameEnum.SINGLE_SPECIALNESS)} {
-        color: ${valueColors?.specialness};
+        color: ${valueColors.specialness};
       }
     `;
 
     return styles;
 };
 
-export const renderStyle = (options?: Partial<Options>): HTMLElement => {
+export const renderStyle = (options: Partial<Options>): HTMLElement => {
     const dom = document.createElement('style');
     dom.setAttribute('rel', 'stylesheet');
 

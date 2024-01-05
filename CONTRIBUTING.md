@@ -6,6 +6,8 @@ You can easily debug by opening `test/index.html`, which contains the compiled u
 
 ## 2. pull request
 
+> **Note:** Before creating a pull request, run 'npm run test' to make sure the unit test is running correctly.
+
 - The pull request should be created with a full description of the changes made and the reason for the changes.
 - The check pull request Action should be passed before the owner merges it.
 

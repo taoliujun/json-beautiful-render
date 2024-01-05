@@ -1,0 +1,735 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsonRender default 1`] = `
+<div>
+  <style
+    rel="stylesheet"
+  >
+    
+      .json_render__base_root_wrapper {
+        margin-left: 24px;
+      }
+      .json_render__root_wrapper {
+        position: relative;
+        font-family: monospace, Arial;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .json_render__root_wrapper * {
+        font-family: inherit;
+      }
+    
+      .json_render__items_wrapper {
+        position: relative;
+      }
+      .json_render__items_wrapper::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 20px;
+        bottom: 20px;
+        border-left: 1px dashed #ccc;
+      }
+      .json_render__items_content {
+        padding-left: 24px;
+        display: none;
+      }
+      .json_render__items_content.json_render__items_content_expand {
+        display: block;
+      }
+      .json_render__items_begin {
+        color: #000004;
+        word-break: keep-all;
+        white-space: nowrap;
+        position: relative;
+      }
+      .json_render__items_end {
+        color: #000004;
+      }
+      .json_render__items_wrapper:hover &gt; .json_render__items_begin,
+      .json_render__items_wrapper:hover &gt; .json_render__items_end {
+        color: #000003;
+      }
+      .json_render__items_expand {
+        position: absolute;
+        left: -4px;
+        top: 2px;
+        transform: translateX(-100%);
+        width: 16px;
+        height: 16px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px dashed #ddd;
+        color: #ddd;
+        background: #fff;
+      }
+      .json_render__items_length {
+        margin-left: 5px;
+        color: #ddd;
+        font-size: 12px;
+        font-style: italic;
+      }
+    
+      .json_render__single_wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .json_render__single_content {
+        display: inline-flex;
+        align-items: baseline;
+      }
+      .json_render__single_wrapper.active,
+      .json_render__single_wrapper:hover {
+        background-color: #000001;
+      }
+      .json_render__single_wrapper.active .json_render__single_content,
+      .json_render__single_wrapper:hover  .json_render__single_content {
+        background-color: #000002;
+        font-weight: 700;
+      }
+      .json_render__single_label {
+        color: #000004;
+        word-break: keep-all;
+        white-space: nowrap;
+      }
+      .json_render__single_value {
+        color: #000005;
+      }
+      .json_render__single_string {
+        color: #000006;
+      }
+      .json_render__single_number {
+        color: #000007;
+      }
+      .json_render__single_specialness {
+        color: #000008;
+      }
+    
+  </style>
+  <div
+    class="json_render__items_wrapper json_render__root_wrapper json_render__base_root_wrapper"
+    data-testid="wrapper"
+  >
+    <div
+      class="json_render__items_begin"
+      data-testid="begin"
+    >
+      <button
+        class="json_render__items_expand"
+        data-testid="expand"
+      >
+        -
+      </button>
+      {
+      <span
+        class="json_render__items_length"
+        data-testid="length"
+      >
+        9 items
+      </span>
+    </div>
+    <div
+      class="json_render__items_content json_render__items_content_expand"
+    >
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "name": 
+          </span>
+          <span
+            class="json_render__single_value json_render__single_string"
+            data-testid="value"
+          >
+            "Lebron James",
+          </span>
+        </div>
+      </div>
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "age": 
+          </span>
+          <span
+            class="json_render__single_value json_render__single_number"
+            data-testid="value"
+          >
+            31,
+          </span>
+        </div>
+      </div>
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "isMvp": 
+          </span>
+          <span
+            class="json_render__single_value json_render__single_specialness"
+            data-testid="value"
+          >
+            true,
+          </span>
+        </div>
+      </div>
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "isCoach": 
+          </span>
+          <span
+            class="json_render__single_value json_render__single_specialness"
+            data-testid="value"
+          >
+            false,
+          </span>
+        </div>
+      </div>
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "car": 
+          </span>
+          <span
+            class="json_render__single_value json_render__single_specialness"
+            data-testid="value"
+          >
+            null,
+          </span>
+        </div>
+      </div>
+      <div
+        class="json_render__items_wrapper"
+        data-testid="wrapper"
+      >
+        <div
+          class="json_render__items_begin"
+          data-testid="begin"
+        >
+          <button
+            class="json_render__items_expand"
+            data-testid="expand"
+          >
+            -
+          </button>
+          "address": {
+          <span
+            class="json_render__items_length"
+            data-testid="length"
+          >
+            2 items
+          </span>
+        </div>
+        <div
+          class="json_render__items_content json_render__items_content_expand"
+        >
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_label"
+                data-testid="label"
+              >
+                "country": 
+              </span>
+              <span
+                class="json_render__single_value json_render__single_string"
+                data-testid="value"
+              >
+                "USA",
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_label"
+                data-testid="label"
+              >
+                "province": 
+              </span>
+              <span
+                class="json_render__single_value json_render__single_string"
+                data-testid="value"
+              >
+                "LosAngle"
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="json_render__items_end"
+          data-testid="end"
+        >
+          },
+        </div>
+      </div>
+      <div
+        class="json_render__items_wrapper"
+        data-testid="wrapper"
+      >
+        <div
+          class="json_render__items_begin"
+          data-testid="begin"
+        >
+          <button
+            class="json_render__items_expand"
+            data-testid="expand"
+          >
+            -
+          </button>
+          "mvpYears": [
+          <span
+            class="json_render__items_length"
+            data-testid="length"
+          >
+            4 items
+          </span>
+        </div>
+        <div
+          class="json_render__items_content json_render__items_content_expand"
+        >
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_value json_render__single_number"
+                data-testid="value"
+              >
+                2012,
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_value json_render__single_string"
+                data-testid="value"
+              >
+                "2013",
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_value json_render__single_number"
+                data-testid="value"
+              >
+                2014,
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__items_wrapper json_render__root_wrapper"
+            data-testid="wrapper"
+          >
+            <div
+              class="json_render__items_begin"
+              data-testid="begin"
+            >
+              <button
+                class="json_render__items_expand"
+                data-testid="expand"
+              >
+                -
+              </button>
+              [
+              <span
+                class="json_render__items_length"
+                data-testid="length"
+              >
+                2 items
+              </span>
+            </div>
+            <div
+              class="json_render__items_content json_render__items_content_expand"
+            >
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_value json_render__single_number"
+                    data-testid="value"
+                  >
+                    2015,
+                  </span>
+                </div>
+              </div>
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_value json_render__single_number"
+                    data-testid="value"
+                  >
+                    2016
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="json_render__items_end"
+              data-testid="end"
+            >
+              ]
+            </div>
+          </div>
+        </div>
+        <div
+          class="json_render__items_end"
+          data-testid="end"
+        >
+          ],
+        </div>
+      </div>
+      <div
+        class="json_render__items_wrapper"
+        data-testid="wrapper"
+      >
+        <div
+          class="json_render__items_begin"
+          data-testid="begin"
+        >
+          <button
+            class="json_render__items_expand"
+            data-testid="expand"
+          >
+            -
+          </button>
+          "honour": {
+          <span
+            class="json_render__items_length"
+            data-testid="length"
+          >
+            5 items
+          </span>
+        </div>
+        <div
+          class="json_render__items_content json_render__items_content_expand"
+        >
+          <div
+            class="json_render__items_wrapper"
+            data-testid="wrapper"
+          >
+            <div
+              class="json_render__items_begin"
+              data-testid="begin"
+            >
+              <button
+                class="json_render__items_expand"
+                data-testid="expand"
+              >
+                -
+              </button>
+              "teams": [
+              <span
+                class="json_render__items_length"
+                data-testid="length"
+              >
+                3 items
+              </span>
+            </div>
+            <div
+              class="json_render__items_content json_render__items_content_expand"
+            >
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Heats",
+                  </span>
+                </div>
+              </div>
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Lakers",
+                  </span>
+                </div>
+              </div>
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Cels"
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="json_render__items_end"
+              data-testid="end"
+            >
+              ],
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_label"
+                data-testid="label"
+              >
+                "mvpCount": 
+              </span>
+              <span
+                class="json_render__single_value json_render__single_number"
+                data-testid="value"
+              >
+                6,
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_label"
+                data-testid="label"
+              >
+                "fmvpCount": 
+              </span>
+              <span
+                class="json_render__single_value json_render__single_number"
+                data-testid="value"
+              >
+                4,
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__single_wrapper"
+          >
+            <div
+              class="json_render__single_content"
+            >
+              <span
+                class="json_render__single_label"
+                data-testid="label"
+              >
+                "championCount": 
+              </span>
+              <span
+                class="json_render__single_value json_render__single_number"
+                data-testid="value"
+              >
+                4,
+              </span>
+            </div>
+          </div>
+          <div
+            class="json_render__items_wrapper"
+            data-testid="wrapper"
+          >
+            <div
+              class="json_render__items_begin"
+              data-testid="begin"
+            >
+              <button
+                class="json_render__items_expand"
+                data-testid="expand"
+              >
+                -
+              </button>
+              "appraise": {
+              <span
+                class="json_render__items_length"
+                data-testid="length"
+              >
+                3 items
+              </span>
+            </div>
+            <div
+              class="json_render__items_content json_render__items_content_expand"
+            >
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_label"
+                    data-testid="label"
+                  >
+                    "mvp": 
+                  </span>
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Most Valuable Player",
+                  </span>
+                </div>
+              </div>
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_label"
+                    data-testid="label"
+                  >
+                    "fmvp": 
+                  </span>
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Finals Most Valuable Player",
+                  </span>
+                </div>
+              </div>
+              <div
+                class="json_render__single_wrapper"
+              >
+                <div
+                  class="json_render__single_content"
+                >
+                  <span
+                    class="json_render__single_label"
+                    data-testid="label"
+                  >
+                    "champion": 
+                  </span>
+                  <span
+                    class="json_render__single_value json_render__single_string"
+                    data-testid="value"
+                  >
+                    "Champion"
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="json_render__items_end"
+              data-testid="end"
+            >
+              }
+            </div>
+          </div>
+        </div>
+        <div
+          class="json_render__items_end"
+          data-testid="end"
+        >
+          },
+        </div>
+      </div>
+      <div
+        class="json_render__single_wrapper"
+      >
+        <div
+          class="json_render__single_content"
+        >
+          <span
+            class="json_render__single_label"
+            data-testid="label"
+          >
+            "say": 
+          </span>
+          <span
+            class="json_render__single_value"
+            data-testid="value"
+          >
+            Function
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="json_render__items_end"
+      data-testid="end"
+    >
+      }
+    </div>
+  </div>
+</div>
+`;
