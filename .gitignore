@@ -1,5 +1,6 @@
 node_modules/
 /lib
+/reports
 *.log
 .eslintcache
 .DS_Store

@@ -1,3 +1,4 @@
+import { IS_JEST } from '../utils/env';
 import type { Options } from './types';
 
 export const DEFAULT_OPTIONS: Options = {
@@ -15,4 +16,4 @@ export const DEFAULT_OPTIONS: Options = {
     showItemsLength: 'collapse',
 };
 
-export const ROOT_KEY = `$ROOT_KEY_${Math.random().toString(36).slice(2)}$`;
+export const ROOT_KEY = IS_JEST ? `$ROOT_KEY$` : `$ROOT_KEY_${Math.random().toString(36).slice(2)}$`;

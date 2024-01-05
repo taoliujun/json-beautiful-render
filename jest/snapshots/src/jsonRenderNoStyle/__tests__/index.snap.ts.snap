@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsonRenderNoStyle default 1`] = `
+"{
+#__#"name": "Lebron James",
+#__#"age": 31,
+#__#"isMvp": true,
+#__#"isCoach": false,
+#__#"car": null,
+#__#"address": {
+#__##__#"country": "USA",
+#__##__#"province": "LosAngle"
+#__#},
+#__#"mvpYears": [
+#__##__#2012,
+#__##__#"2013",
+#__##__#2014,
+#__##__#[
+#__##__##__#2015,
+#__##__##__#2016
+#__##__#]
+#__#],
+#__#"honour": {
+#__##__#"teams": [
+#__##__##__#"Heats",
+#__##__##__#"Lakers",
+#__##__##__#"Cels"
+#__##__#],
+#__##__#"mvpCount": 6,
+#__##__#"fmvpCount": 4,
+#__##__#"championCount": 4,
+#__##__#"appraise": {
+#__##__##__#"mvp": "Most Valuable Player",
+#__##__##__#"fmvp": "Finals Most Valuable Player",
+#__##__##__#"champion": "Champion"
+#__##__#}
+#__#},
+#__#"say": Function
+}"
+`;

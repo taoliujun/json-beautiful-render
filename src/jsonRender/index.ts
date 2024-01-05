@@ -8,7 +8,7 @@ import { ROOT_KEY, DEFAULT_OPTIONS } from './constant';
 const render = (
     keyName: string,
     values: object,
-    opt?: Partial<{ isLast: boolean }> & Partial<Pick<Options, 'expand' | 'showItemsLength'>>,
+    opt: Partial<{ isLast: boolean }> & Partial<Pick<Options, 'expand' | 'showItemsLength'>>,
 ): HTMLElement => {
     const valueEntries = Object.entries(values);
     const isArrayType = isArray(values);
@@ -34,7 +34,7 @@ const renderMain = (el: HTMLElement | null | undefined, jsonValue: object, optio
         ...DEFAULT_OPTIONS,
         ...options,
         valueColors: {
-            ...DEFAULT_OPTIONS?.valueColors,
+            ...DEFAULT_OPTIONS.valueColors,
             ...options?.valueColors,
         },
     };
@@ -44,8 +44,8 @@ const renderMain = (el: HTMLElement | null | undefined, jsonValue: object, optio
         renderStyle(finalOptions),
         render(ROOT_KEY, jsonValue, {
             isLast: true,
-            expand: finalOptions?.expand,
-            showItemsLength: finalOptions?.showItemsLength,
+            expand: finalOptions.expand,
+            showItemsLength: finalOptions.showItemsLength,
         }),
     );
 

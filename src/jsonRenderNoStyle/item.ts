@@ -8,11 +8,11 @@ const endLine = `\n`;
 export const generateSingleItem = (
     label: string,
     value: unknown,
-    opt?: Partial<{
+    opt: Partial<{
         isLast: boolean;
     }>,
 ) => {
-    const { isLast } = opt || {};
+    const { isLast } = opt;
     const comma = isLast ? '' : ',';
 
     let wrapperDom = '';
@@ -40,15 +40,15 @@ export const generateSingleItem = (
 export const generateWrapperItem = (
     label: string,
     values: string[],
-    options?: Partial<Options>,
-    opt?: Partial<{
+    options: Partial<Options>,
+    opt: {
         isArrayType: boolean;
         isLast: boolean;
         level: number;
-    }>,
+    },
 ) => {
-    const { indent = DEFAULT_OPTIONS.indent } = options || {};
-    const { isArrayType, isLast, level = 0 } = opt || {};
+    const { indent = DEFAULT_OPTIONS.indent } = options;
+    const { isArrayType, isLast, level = 1 } = opt;
     const typeSperatorBegin = isArrayType ? '[' : '{';
     const typeSperatorEnd = isArrayType ? ']' : '}';
 
