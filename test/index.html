@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>umd</title>
+  <script src="../lib/umd/index.js"></script>
+</head>
+
+<body>
+  <script>
+    const formatData = {
+      "number": 1234,
+      "string": "hello",
+      "boolean": true,
+      "function": function () { },
+      "array": [1, 2, '3', false],
+      "object": {
+        "number": 1234,
+        "string": "hello",
+        "boolean": true,
+      },
+      "nested": {
+        "number": 1234,
+        "string": "hello",
+        "object": {
+          "number": 1234,
+          "array": [1, 2, {
+            "number": 1234,
+            "string": "hello",
+            "boolean": true,
+          }]
+        },
+        "array": [1, '2', {
+          "word": '3'
+        }, ['4']]
+      }
+    }
+  </script>
+  <h2>format with style</h2>
+  <div id="styleDom"></div>
+  <script>
+      (function () {
+        const result = window.jsonRender(document.querySelector('#styleDom'), formatData, {
+          // expand: true
+          // showItemsLength: false,
+        });
+        // console.log('jsonRender result', result);
+      })()
+  </script>
+
+  <h2>format without style</h2>
+  <pre id="noStyleDom"></pre>
+  <script>
+      (function () {
+        const result = window.jsonRenderNoStyle(document.querySelector('#noStyleDom'), formatData, { indent: '  ' });
+        // console.log('jsonRenderNoStyle result', result);
+      })()
+  </script>
+</body>
+
+</html>

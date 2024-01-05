@@ -1,0 +1,70 @@
+{
+  "name": "json-beautiful-render",
+  "version": "2.1.0",
+  "description": "json beautiful render",
+  "keywords": [
+    "json",
+    "json render",
+    "json beautiful",
+    "json pretty",
+    "json html"
+  ],
+  "author": "taoliujun <taoliujun@qq.com>",
+  "homepage": "https://github.com/taoliujun/json-beautiful-render",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "types": "./lib/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "_debug_main": "./src/index.ts",
+  "exports": {
+    "types": "./lib/types/index.d.ts",
+    "require": "./lib/cjs/index.js",
+    "export": "./lib/esm/index.js",
+    "default": "./lib/cjs/index.js"
+  },
+  "files": [
+    "lib",
+    "*.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taoliujun/json-beautiful-render.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taoliujun/json-beautiful-render/issues"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "changelog": "npm exec changeset add",
+    "version": "npm exec changeset version",
+    "release": "npm exec changeset publish",
+    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
+    "test": "echo 'test'",
+    "lint": "eslint src --ext .ts,.js --cache",
+    "lint:ts": "tsc --noEmit",
+    "clean": "rm -rf lib/",
+    "build:readme": "cp -f ./README.zh_CN.md ./README.md",
+    "build:types": "tsc -d --emitDeclarationOnly --declarationDir lib/types",
+    "build:cjs": "tsc --module CommonJS --moduleResolution Node --outDir lib/cjs",
+    "build:esm": "tsc --module ES6 --moduleResolution Bundler --outDir lib/esm",
+    "build:umd": "pnpm run build:cjs --outDir lib/umd/_tmp && webpack --config ./config/webpack.umd.js && rm -rf lib/umd/_tmp",
+    "build": "npm run clean && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:readme"
+  },
+  "devDependencies": {
+    "@changesets/changelog-git": "^0.2.0",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@taoliujun/eslint-config": "^2.0.1",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^20.10.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
