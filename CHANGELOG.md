@@ -1,5 +1,11 @@
 # json-beautiful-render
 
+## 2.1.2
+
+### Patch Changes
+
+- 3056924: test: add tests
+
 ## 2.1.1
 
 ### Patch Changes
