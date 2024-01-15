@@ -12,10 +12,10 @@ devDependencies:
     specifier: ^2.27.1
     version: 2.27.1
   '@commitlint/cli':
-    specifier: ^18.4.3
+    specifier: ^18.4.4
     version: 18.4.4(@types/node@20.10.6)(typescript@5.3.3)
   '@commitlint/config-conventional':
-    specifier: ^18.4.3
+    specifier: ^18.4.4
     version: 18.4.4
   '@taoliujun/eslint-config':
     specifier: ^2.0.1

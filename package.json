@@ -57,8 +57,8 @@
   "devDependencies": {
     "@changesets/changelog-git": "^0.2.0",
     "@changesets/cli": "^2.27.1",
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@taoliujun/eslint-config": "^2.0.1",
     "@testing-library/dom": "^9.3.3",
     "@tsconfig/node18": "^18.2.2",
