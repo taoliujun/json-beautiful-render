@@ -60,7 +60,7 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@taoliujun/eslint-config": "^2.0.1",
-    "@testing-library/dom": "^9.3.3",
+    "@testing-library/dom": "^9.3.4",
     "@tsconfig/node18": "^18.2.2",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.5",

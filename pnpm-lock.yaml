@@ -21,8 +21,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1(typescript@5.3.3)
   '@testing-library/dom':
-    specifier: ^9.3.3
-    version: 9.3.3
+    specifier: ^9.3.4
+    version: 9.3.4
   '@tsconfig/node18':
     specifier: ^18.2.2
     version: 18.2.2
@@ -1191,8 +1191,8 @@ packages:
       - typescript
     dev: true
 
-  /@testing-library/dom@9.3.3:
-    resolution: {integrity: sha512-fB0R+fa3AUqbLHWyxXa2kGVtf1Fe1ZZFr0Zp6AIbIAzXb2mKbEXl+PCQNUOaq5lbTab5tfctfXRNsWXxa2f7Aw==}
+  /@testing-library/dom@9.3.4:
+    resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
     dependencies:
       '@babel/code-frame': 7.23.5
