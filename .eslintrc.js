@@ -1,7 +1,10 @@
 module.exports = {
     extends: ['@taoliujun/eslint-config'],
-    parserOptions: { project: './tsconfig.lint.json' },
     overrides: [
+        {
+            files: ['**/*.ts', '**/*.tsx'],
+            parserOptions: { project: path.resolve(__dirname, './tsconfig.lint.json') },
+        },
         {
             // page store components are temporarily unused
             files: ['./src/index.ts'],
