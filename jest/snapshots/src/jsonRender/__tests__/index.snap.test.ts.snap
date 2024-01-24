@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jsonRender default 1`] = `
+exports[`jsonRender 1`] = `
 <div>
   <style
     rel="stylesheet"

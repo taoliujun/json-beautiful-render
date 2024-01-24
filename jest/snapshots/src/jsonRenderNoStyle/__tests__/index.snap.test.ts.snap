@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jsonRenderNoStyle default 1`] = `
+exports[`jsonRenderNoStyle 1`] = `
 "{
 #__#"name": "Lebron James",
 #__#"age": 31,
