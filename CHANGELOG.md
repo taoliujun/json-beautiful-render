@@ -1,5 +1,11 @@
 # json-beautiful-render
 
+## 2.1.5
+
+### Patch Changes
+
+- 2074a01: chore: add release workflow
+
 ## 2.1.4
 
 ### Patch Changes
