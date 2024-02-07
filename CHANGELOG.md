@@ -1,5 +1,11 @@
 # json-beautiful-render
 
+## 2.1.6
+
+### Patch Changes
+
+- c762dc1: fix: button click stopPropagation
+
 ## 2.1.5
 
 ### Patch Changes
