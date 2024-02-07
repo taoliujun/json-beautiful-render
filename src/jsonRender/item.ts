@@ -76,6 +76,7 @@ export const generateWrapperItem = (
 
     const expandDom = document.createElement('button');
     addTestid(expandDom, 'expand');
+    expandDom.setAttribute('type', 'button');
     expandDom.classList.add(generateClassName(ClassNameEnum.ITEMS_EXPAND));
 
     const lengthDom = document.createElement('span');
