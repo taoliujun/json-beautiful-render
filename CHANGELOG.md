@@ -1,5 +1,11 @@
 # json-beautiful-render
 
+## 2.1.4
+
+### Patch Changes
+
+- 557378a: fix: set expand button type to button
+
 ## 2.1.3
 
 ### Patch Changes
