@@ -113,7 +113,8 @@ export const generateWrapperItem = (
     wrapperDom.append(beginWrapper, contentWrapper, endWrapper);
 
     let hasExpand = false;
-    const toggleExpand = () => {
+    const toggleExpand = (e?: Event) => {
+        e?.stopPropagation?.();
         hasExpand = !hasExpand;
         expandDom.textContent = hasExpand ? '-' : '+';
         contentWrapper.classList.toggle(generateClassName(ClassNameEnum.ITEMS_CONTENT_EXPAND), hasExpand);
