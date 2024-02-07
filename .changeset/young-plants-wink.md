@@ -1,5 +1,5 @@
 ---
-"json-beautiful-render": patch
+'json-beautiful-render': patch
 ---
 
-fix: button click
+fix: button click stopPropagation
