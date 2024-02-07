@@ -41,6 +41,7 @@ jobs:
             - name: commit
               run: |
                   git add .
+                  HUSKY=0 git commit -m "RELEASE: new version"
 
             - name: push
               run: git push && git push --tags
