@@ -1,0 +1,47 @@
+name: release
+run-name: '${{github.workflow}}'
+on: workflow_dispatch
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: init repo
+              run: |
+                  git config user.name "Github Actions"
+                  git config user.email "github.actions@github.com"
+
+            - name: init pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+
+            - name: init node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: 'pnpm'
+
+            - name: install dependencies
+              run: pnpm install
+
+            - name: new version
+              run: pnpm run version
+
+            - name: build
+              run: pnpm run build
+
+            - name: release
+              run: |
+                  NPM_TOKEN=${{secrets.NPM_TOKEN}} pnpm run release:token
+
+            - name: commit
+              run: |
+                  git add .
+                  git commit -m "RELEASE: new version [skip ci]"
+
+            - name: push
+              run: git push && git push --tags

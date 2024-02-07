@@ -41,7 +41,7 @@
     "changelog": "pnpm exec changeset add",
     "version": "pnpm exec changeset version",
     "release": "pnpm exec changeset publish",
-    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && pnpm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
+    "release:token": "cp -f .npmrc .npmrc.bak && echo \"\nregistry=https://registry.npmjs.org\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" >> .npmrc && npm exec changeset publish && cp -f .npmrc.bak .npmrc && rm .npmrc.bak",
     "test": "pnpm exec jest",
     "test:coverage": "pnpm exec jest --config=jest.coverage.config.js",
     "lint": "eslint src --ext .ts,.js --cache",
