@@ -40,7 +40,7 @@ jobs:
 
             - name: commit
               run: |
-                  git add . && git commit -m "chore: new version [skip ci]"
+                  git add .
 
             - name: push
               run: git push && git push --tags
