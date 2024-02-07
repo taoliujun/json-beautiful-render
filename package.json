@@ -37,7 +37,7 @@
     "url": "https://github.com/taoliujun/json-beautiful-render/issues"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "changelog": "pnpm exec changeset add",
     "version": "pnpm exec changeset version",
     "release": "pnpm exec changeset publish",
@@ -64,7 +64,7 @@
     "@tsconfig/node18": "^18.2.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.10.5",
-    "husky": "^8.0.3",
+    "husky": "^9.0.10",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.1",
