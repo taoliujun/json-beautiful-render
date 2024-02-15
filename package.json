@@ -13,7 +13,7 @@
   "homepage": "https://github.com/taoliujun/json-beautiful-render",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=20.11.1"
   },
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -63,7 +63,7 @@
     "@testing-library/dom": "^9.3.4",
     "@tsconfig/node18": "^18.2.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.10.5",
+    "@types/node": "^20.11.19",
     "husky": "^9.0.10",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
