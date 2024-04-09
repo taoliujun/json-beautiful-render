@@ -1,5 +1,11 @@
 # json-beautiful-render
 
+## 2.1.7
+
+### Patch Changes
+
+- 4e65f15: fix: process is not defined
+
 ## 2.1.6
 
 ### Patch Changes
