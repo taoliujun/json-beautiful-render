@@ -119,6 +119,7 @@ exports[`jsonRender 1`] = `
       <button
         class="json_render__items_expand"
         data-testid="expand"
+        type="button"
       >
         -
       </button>
@@ -244,6 +245,7 @@ exports[`jsonRender 1`] = `
           <button
             class="json_render__items_expand"
             data-testid="expand"
+            type="button"
           >
             -
           </button>
@@ -317,6 +319,7 @@ exports[`jsonRender 1`] = `
           <button
             class="json_render__items_expand"
             data-testid="expand"
+            type="button"
           >
             -
           </button>
@@ -384,6 +387,7 @@ exports[`jsonRender 1`] = `
               <button
                 class="json_render__items_expand"
                 data-testid="expand"
+                type="button"
               >
                 -
               </button>
@@ -453,6 +457,7 @@ exports[`jsonRender 1`] = `
           <button
             class="json_render__items_expand"
             data-testid="expand"
+            type="button"
           >
             -
           </button>
@@ -478,6 +483,7 @@ exports[`jsonRender 1`] = `
               <button
                 class="json_render__items_expand"
                 data-testid="expand"
+                type="button"
               >
                 -
               </button>
@@ -613,6 +619,7 @@ exports[`jsonRender 1`] = `
               <button
                 class="json_render__items_expand"
                 data-testid="expand"
+                type="button"
               >
                 -
               </button>
