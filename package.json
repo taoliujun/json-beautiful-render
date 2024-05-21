@@ -13,7 +13,7 @@
   "homepage": "https://github.com/taoliujun/json-beautiful-render",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=18.20.3"
   },
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
